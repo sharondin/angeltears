@@ -1,0 +1,343 @@
+//Skins
+$slimegreen: #64e673;
+$flopink: #FF48B0;
+$flopinklink: #811649;
+$turq: #4dd3fa;
+$turqlink: #1F607F;
+$peach: #f4764f;
+$mustard: #ffcf04;
+$tablet: 500px;
+$desktop: 1000px;
+$controlsHeight: 86px;
+
+//Posts
+@import './anything.scss';
+@import './slowly.scss';
+@import './dontcha.scss';
+
+//These should get separated into individual files per post
+.blue-moon {
+    .button {
+        background-color: $slimegreen;
+    }
+ 
+    .qzine-page {
+        background-color: $slimegreen;
+    }
+    .front-cover {
+        background-position: center;
+        background-image: url('../images/qzinefrontcover.jpg');
+    @media screen and (max-width: $desktop) {
+        background-image: url('../images/qzinefrontcover-mobile.jpg');
+    }
+    }
+    .back-cover {
+        background-image: url('../images/qzinebackcover.jpg')
+    }
+}
+
+.earth-angel {
+    .p9 img {
+        object-position: right;
+    }
+    .p13 iframe {
+        width: 130%!important;
+    }
+    .p24 img {
+        object-position: right;
+    }
+    .p24, .p25 {
+        picture {
+            max-height: 65%;
+            overflow: hidden;
+        }
+    }
+    .p26 img {
+        object-position: 60%;
+    }
+    .p27 img {
+        object-position: 70%;
+    }
+    .p29 iframe {
+        width: 89%!important;
+    }
+    .p34 iframe {
+        width: 120%!important;
+        left: 56%!important;
+    }
+    .p35 iframe {
+        width: 160%!important;
+        height: 200%;
+    }
+    .p36 iframe {
+        width: 100%;
+    }
+    .p37 img {
+        object-fit: fill;
+    }
+    .p40 iframe {
+        width: 120%!important;
+        left: 56%!important;
+    }
+    .p41 iframe {
+        width: 300% !important;
+        height: 80% !important;
+    }
+    .p42, .p43 {
+        iframe {
+            width: 350%!important;
+            height: 170%!important;
+            left: 40%;
+        }
+    }
+    .p42 iframe {
+        left: 69%;
+    }
+    .p48 img {
+        object-position: right;
+    }
+    .p49 img {
+        object-position: left;
+    }
+    .p46 iframe {
+        width: 120%!important;
+        left: 56%!important;
+    }
+    a {
+        color: $flopinklink;
+    }
+    .button {
+        background-color: $flopink;
+    }
+
+    .qzine-page {
+        background-color: $flopink;
+    }
+    .front-cover {
+        background-position: right;
+        background-image: url('../images/earth-angel/coverforearthangel.jpg');
+        @media screen and (max-width: $desktop) {
+            background-image: url('../images/earth-angel/coverforearthangel-mobile.jpg');
+        }
+    }
+    .back-cover {
+        background-image: url('../images/earth-angel/backcoverforearthangel.jpg')
+    }
+    .dedication {
+        justify-content: center;
+    }
+    .dedication-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: flex-end;
+        padding-top: calc(#{$controlsHeight} + 10px);
+        padding-bottom: calc(#{$controlsHeight} + 10px);
+        padding-left: 10px;
+        padding-right: 10px;
+        @media screen and (max-width: $desktop) {
+            padding-top: 10px;
+            padding-bottom: 65px;
+        }
+        @media screen and (max-width: $tablet) {
+            padding-top: 10px;
+            padding-bottom: 30px;
+        }
+    }
+    .dedication-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        flex: 1 0 33%;
+        @media screen and (max-width: $desktop) {
+            flex: 0 0 75%;
+        }
+        @media screen and (max-width: $tablet) {
+            flex: 0 0 85%;
+        }
+        & > * {
+            padding: 10px 0;
+            @media screen and (max-width: $tablet) {
+                padding-bottom: 5px;
+            }
+        }
+    }
+    .dedication-image-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex: 0 0 5%;
+    }
+    .pearljam-quote {
+        width: 30%;
+        @media screen and (max-width: $desktop) {
+            width: 50%;
+        }
+    }
+}
+
+.this-is-my-heaven {
+    a {
+        color: $turqlink;
+    }
+    p {
+        line-height: 2.2;
+        @media screen and (max-width: $desktop) {
+            line-height: 1.6;
+        }
+    }
+    .button {
+        background-color: $turq;
+    }
+
+    .qzine-page {
+        background-color: $turq;
+        iframe {
+            width: 100%!important;
+        }
+    }
+    .front-cover {
+        background-position: left;
+        background-image: url('../images/heaven/qzinefrontcover.jpg');
+        @media screen and (max-width: $desktop) {
+            background-image: url('../images/heaven/qzinefrontcover-mobile.jpg');
+        }
+    }
+    .back-cover {
+        background-image: url('../images/heaven/qzinebackcover.jpg');
+        background-position: right;
+    }
+    .images-with-text {
+        img {
+            max-width: 100%;
+        }
+    }
+    .p7 {
+        img {
+            object-fit: contain;
+        }
+    }
+    .p18 {
+        iframe {
+            width: 134% !important;
+            left: 54%;
+        }
+    }
+    .p33 {
+        iframe {
+            width: 150% !important;
+            left: 55%;
+        }
+    }
+    .full-page-image-and-video {
+        picture {
+            height: 55%;
+        }
+        img {
+            object-fit: cover;
+            object-position: top;
+        }
+        iframe {
+            height: 250%;
+            width: 150%!important;
+        }
+    }
+    .p43 {
+        iframe {
+            width: 250% !important;
+            left: 60%;
+            height: 110%;
+        }
+    }
+    .p47 {
+        iframe {
+            width: 200%!important;
+            left: 60%;
+            top: 47%;
+        }
+    }
+    .p49 {
+        iframe {
+            width: 150% !important;
+            left: 60%;
+        }
+    }
+}
+@media not all and (min-resolution:.001dpcm)
+{ @supports (-webkit-appearance:none) {
+    .this-is-my-heaven {
+        .full-page-image-and-video {
+            iframe {
+                top: 25%;
+                left: 55%;
+            }
+        }
+    }
+  }
+}
+
+.put-your-hand-in-the-hand {
+    a {
+        color: darken($peach, 30)
+    }
+    .dedication {
+        p {
+            margin: .25rem 16vw;
+            &:last-child {
+                margin-top: 1rem;
+            }
+            font-size: 12px;
+            @media screen and (max-width: $desktop) {
+                font-size: 9px;
+                margin: .25rem 5.5rem;
+                &:last-child {
+                    margin-top: 1rem;
+                }
+            }
+            @media screen and (max-width: $tablet) {
+                font-size: 7px;
+                margin: .25rem 2rem;
+                &:last-child {
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+    .qzine-page {
+        background-color: $peach;
+    }
+    .button {
+        background-color: $peach;
+    }
+    .front-cover {
+        background-position: 70%;
+        background-image: url('../images/hands/qzinefrontcover.jpg');
+        @media screen and (max-width: $desktop) {
+            background-image: url('../images/hands/qzinefrontcover-mobile.jpg');
+        }
+    }
+    .back-cover {
+        background-image: url('../images/hands/qzinebackcover.jpg');
+        background-position: right;
+    }
+    .p35 {
+        iframe {
+            transform: translateX(-15%);
+        }
+    }
+    .chickpea .process {
+        margin-top: 0;
+    }
+    .chocolate-cake {
+        @media screen and (min-width: $tablet) {
+            h1 {
+                height: 20vh;
+                line-height: 20vh;
+            }
+            .process {
+                margin-top: 20vh;
+            }
+        }
+    }
+}

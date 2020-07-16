@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Angel Tears</title>
+    <link>http://ezines.angeltearsforever.com/posts/</link>
+    <description>Recent content in Posts on Angel Tears</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 17 Apr 2020 09:57:47 -0700</lastBuildDate>
+    
+	<atom:link href="http://ezines.angeltearsforever.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blue Moon</title>
+      <link>http://ezines.angeltearsforever.com/posts/blue-moon/</link>
+      <pubDate>Fri, 17 Apr 2020 09:57:47 -0700</pubDate>
+      
+      <guid>http://ezines.angeltearsforever.com/posts/blue-moon/</guid>
+      <description>.cls-1 { fill: #f6f6f6; }        ←   →        Essentials
+March - April 2020
+In Memory of Bevin
+ Instant coffee (Two Bulk Tins), Italian Roast and Decaf
+        Everything Bagels from Maury’s
+      VHS copy of Alec Baldwin’s The Shadow from Ebay</description>
+    </item>
+    
+  </channel>
+</rss>

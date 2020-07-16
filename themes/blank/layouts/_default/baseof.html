@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode | default "en-us" }}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>{{ .Title }}</title>
+	{{ with .Site.Params.description }}<meta name="description" content="{{ . }}">{{ end }}
+	{{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+	{{ $sass := resources.Get "style.scss" }}
+	{{ $style := $sass | resources.ToCSS (dict "outputStyle" "compressed")}}
+	<link rel="stylesheet" href="{{$style.Permalink}}">
+	{{ $menuSass := resources.Get "menu.scss" }}
+	{{ $menu := $menuSass | resources.ToCSS (dict "outputStyle" "compressed")}}
+	<link rel="stylesheet" href="{{$menu.Permalink}}">
+	{{ $skinsSass := resources.Get "skins.scss" }}
+	{{ $skins := $skinsSass | resources.ToCSS (dict "outputStyle" "compressed")}}
+	<link rel="stylesheet" href="{{$skins.Permalink}}">
+	<script>
+		window.lazySizesConfig = window.lazySizesConfig || {};
+		window.lazySizesConfig.customMedia = {
+			'--tablet': '(max-width: 1000px)',
+		};
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async=""></script>
+	<script
+	src="https://code.jquery.com/jquery-3.5.0.min.js"
+	integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+	crossorigin="anonymous"></script>
+	{{ $turn := resources.Get "turn.js" }}
+	<script src="{{$turn.Permalink}}"></script>
+	{{ $flipbook := resources.Get "flipbook.js" }}
+	<script src="{{$flipbook.Permalink}}"></script>
+	{{ with .OutputFormats.Get "RSS" -}}
+		{{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }}
+	{{- end }}
+</head>
+<body>
+	{{ partial "header" . }}
+	{{ block "main" . }}{{ end }}
+	{{ partial "footer" . }}
+	<script>
+		window.addEventListener('DOMContentLoaded', function() {
+			var butterflies = document.querySelectorAll('.butterfly');
+			function getRandomArbitrary(min, max) {
+				return Math.random() * (max - min) + min;
+			}
+			function animateButterfly(butterfly, interval) {
+				setInterval(function() {
+					var numberX = Math.floor(getRandomArbitrary(0, window.innerWidth));
+					var numberY = Math.floor(getRandomArbitrary(0, window.innerHeight));
+					
+					butterfly.style.setProperty('--random-y', numberY +'px');
+					butterfly.style.setProperty('--random-x', numberX +'px');
+				}, interval);
+			}
+			if (butterflies.length) {
+				animateButterfly(butterflies[0], 9000);
+				animateButterfly(butterflies[1], 13000);
+			}
+
+		})
+	</script>
+</body>
+</html>
