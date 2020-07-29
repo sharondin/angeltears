@@ -28,14 +28,14 @@ $dontchagrayLink: darken($dontchagray, 50%);
 
     .front-cover {
         background-position: center;
-        background-image: url('/angeltears/images/dontcha-think-its-time/donchathinkitstimecover-horizontal.jpg');
+        background-image: url('/../images/dontcha-think-its-time/donchathinkitstimecover-horizontal.jpg');
     @media screen and (max-width: $desktop) {
-        background-image: url('/angeltears/images/dontcha-think-its-time/donchathinkitstimecover-horizontal.jpg');
+        background-image: url('/../images/dontcha-think-its-time/donchathinkitstimecover-horizontal.jpg');
     }
 
     }
     .back-cover {
-        background-image: url('/angeltears/images/dontcha-think-its-time/donchathinkitstimebackcover.jpg');
+        background-image: url('/../images/dontcha-think-its-time/donchathinkitstimebackcover.jpg');
         background-position: right;
     }
 
